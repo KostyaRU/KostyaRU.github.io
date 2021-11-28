@@ -1,0 +1,14 @@
+.text {
+    margin: 0;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    &_fz12 {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    &_fz14 {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}

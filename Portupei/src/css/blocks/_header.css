@@ -1,0 +1,36 @@
+.header {
+    padding: 10px 0;
+    height: 68px;
+    background-color: #fff; 
+}
+.header .header__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header .header__logo {
+    width: 250px;
+    height: 48px;
+}
+.header .header__logo img {
+    width: 100%;
+}
+.header .header__nav {
+    display: flex;
+}
+.header .header__items {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+.header .header__item {
+    margin: 0 14px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1e1e1e;
+    text-transform: uppercase; 
+}

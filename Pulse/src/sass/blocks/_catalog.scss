@@ -1,0 +1,185 @@
+.catalog {
+    padding-bottom: 103px;
+    &__tabs {
+        margin-top: 70px;
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style-type: none;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    &__tab {
+        margin: 0 5px;
+        width: 222px;
+        height: 52px;
+        background: rgba(0, 0, 0, 0.0001);
+        border: 2px solid #D0D0D0;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 48px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #6B6B6B;
+        transform: skewX(-25deg);
+        cursor: pointer;
+        transition: 0.5s all;
+        &:hover {
+            box-shadow: 3px 3px 20px $main-color;
+            border: none;
+        }
+        div {
+            transform: skewX(25deg);
+        }
+        &_active {
+            color: #ffffff;
+            background-color: $main-color;
+            border: none;
+        }
+    }
+    &__content {
+        margin-top: 60px;
+        display: none;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &_active {
+            display: flex;
+        }
+    }
+    &-item {
+        margin-bottom: 10px;
+        width: 303px;
+        min-height: 442px;
+        background: #FFFFFF;
+        border: 2px solid #E8E8E8;
+        padding: 20px;
+        overflow: hidden;
+        &__img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            max-height: 200px;
+        }
+        &__subtitle {
+            margin-top: 20px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 25px;
+            color: #0D0D0D;
+            text-align: center;
+        }
+        &__descr {
+            margin-top: 15px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
+            color: #0D0D0D;
+            text-align: center;
+        }
+        &__link {
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+            color: $main-color;
+            display: block;
+            text-align: center;
+            &:hover {
+                color: $main-color;
+            }
+        }
+        hr {
+            margin: 17px 0;
+            border-bottom: none;
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__old-price {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            text-decoration-line: line-through;
+            color: #555555;
+        }
+        &__price {
+            margin-top: 2px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 20px;
+            color: #050505;
+
+        }
+        &__wrapper {
+            display: flex;
+            width: calc(200% + 40px);
+        }
+        &__catalog {
+            width: 50%;
+            margin-right: 0px;
+            transition: 0.5s all;
+            transform: translateX(-100%);
+            &_active {
+                transform: translateX(0%);
+                margin-right: 20px;
+            }
+        }
+        &__list {
+            position: relative;
+            width: 50%;
+            margin-left: 20px;
+            padding-left: 17px;
+            transition: 0.5s all;
+            transform: translateX(0%);
+            list-style-type: none;
+            &_active {
+                transform: translateX(-100%);
+                margin-left: 0px;
+                padding-right: 20px;
+            }
+            li {
+                position: relative;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 21px;
+                color: #555555;
+                margin-bottom: 10px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    top: 8px;
+                    left: -14px;
+                    background-color: $main-color;
+                }
+            }
+            a {
+                position: absolute;
+                bottom: 0px;
+                left: 50%;
+                transform: translateX(calc(-50% - 19px));
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 14px;
+                color: $main-color;
+                display: block;
+                text-align: center;
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1010px) {
+    .catalog__content {
+        justify-content: space-around;
+        font-size: 12px;
+    }
+    .catalog__tab {
+        font-size: 12px;
+    }
+}

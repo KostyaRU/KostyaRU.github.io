@@ -1,0 +1,12 @@
+@import url('blocks/_header.css');
+@import url('blocks/_promo.css');
+@import url('blocks/_underline.css');
+@import url('blocks/_album.css');
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
